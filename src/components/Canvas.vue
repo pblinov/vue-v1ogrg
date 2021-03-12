@@ -16,7 +16,7 @@ export default {
   setup () {
     let canvas = ref("canvas")
     onMounted(() => {
-      console.log("Mounted" + canvas.getContext("2d"));
+      console.log("Mounted" + canvas.value.getContext("2d"));
     })
   },
   methods: {
