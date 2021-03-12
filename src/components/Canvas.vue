@@ -2,7 +2,7 @@
   <div>
     <h1>{{ msg }}</h1>
     <button v-on:click="drawRect">Test</button>
-    <canvas id="canvas"></canvas>
+    <canvas ref="canvas"></canvas>
   </div>
 </template>
 
@@ -15,7 +15,8 @@ export default {
   },
   setup () {
     onMounted(() => {
-      console.log("Mounted");
+      let width = this.$refs.canvas.getAttribute('width');
+      console.log("Mounted" + width);
     })
   },
   methods: {
