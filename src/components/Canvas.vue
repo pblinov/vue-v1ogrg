@@ -16,8 +16,7 @@ export default {
   setup () {
     let canvas = ref("canvas")
     onMounted(() => {
-      let width = canvas.getAttribute('width');
-      console.log("Mounted" + width);
+      console.log("Mounted" + canvas);
     })
   },
   methods: {
