@@ -7,15 +7,16 @@
 </template>
 
 <script lang="ts">
-import {onMounted} from "vue";
+import {ref, onMounted} from "vue";
 export default {
   name: 'Canvas',
   props: {
     msg: String
   },
   setup () {
+    let canvas = ref("canvas")
     onMounted(() => {
-      let width = this.$refs.canvas.getAttribute('width');
+      let width = canvas.getAttribute('width');
       console.log("Mounted" + width);
     })
   },
